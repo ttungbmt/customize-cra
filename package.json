@@ -1,42 +1,44 @@
 {
-  "name": "customize-cra",
-  "version": "1.0.0",
+  "name": "@ttungbmt/customize-cra",
+  "version": "0.0.1",
   "description": "",
-  "repository": "arackaf/customize-cra",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
+  "repository": "ttungbmt/customize-cra",
+  "main": "dist/index.js",
+  "source": "src/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "npm run clean && rollup -c",
-    "clean": "rimraf dist",
-    "test": "jest",
-    "prepack": "npm run build",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "clean": "rm -rf dist/*",
+    "watch": "microbundle watch --no-compress --format cjs",
+    "watch:push": "run-p watch yalc-watch",
+    "build": "microbundle --no-compress --format cjs",
+    "build:push": "run-s build push",
+    "yalc-watch": "nodemon -x yalc push",
+    "push": "yalc push"
   },
-  "author": "Adam Rackis",
+  "author": "Truong Thanh Tung",
   "license": "MIT",
   "dependencies": {
-    "lodash.flow": "^3.5.0"
+    "@babel/plugin-transform-react-jsx": "^7.12.7",
+    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "babel-plugin-date-fns": "^2.0.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-styled-components": "^1.12.0",
+    "customize-cra": "^1.0.0",
+    "customize-cra-react-refresh": "^1.1.0",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "flow-bin": "^0.138.0",
+    "http-proxy-middleware": "^1.0.6",
+    "lodash": "^4.17.20",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-app-rewire-alias": "^0.1.8",
+    "react-app-rewired": "^2.1.6",
+    "webpack-build-notifier": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.1",
-    "@babel/preset-env": "^7.5.0",
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
-    "all-contributors-cli": "^6.8.1",
-    "babel-jest": "^24.8.0",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "rimraf": "^2.6.3",
-    "rollup": "^1.16.6",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.0.1",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-terser": "^5.1.1"
+    "microbundle": "^0.12.4"
   }
 }
