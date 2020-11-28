@@ -25,7 +25,6 @@
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.0.0",
     "babel-plugin-date-fns": "^2.0.0",
-    "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-styled-components": "^1.12.0",
     "customize-cra": "^1.0.0",
     "customize-cra-react-refresh": "^1.1.0",

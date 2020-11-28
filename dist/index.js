@@ -27,7 +27,7 @@ var addExternalBabelPlugins = function addExternalBabelPlugins(plugins) {
 var addDefaultBabel = function addDefaultBabel() {
   return function (config) {
     addBabelPresets(['@emotion/babel-preset-css-prop'])(config);
-    addBabelPlugins(['babel-plugin-lodash', 'date-fns', ['babel-plugin-styled-components']])(config);
+    addBabelPlugins(['date-fns', ['babel-plugin-styled-components']])(config);
     customizeCra.addExternalBabelPlugin(['@babel/plugin-transform-react-jsx'])(config);
   };
 };

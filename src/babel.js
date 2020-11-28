@@ -11,7 +11,6 @@ export const addDefaultBabel = () => config => {
     ])(config)
 
     addBabelPlugins([
-        'babel-plugin-lodash',
         'date-fns',
         ['babel-plugin-styled-components']
     ])(config)
