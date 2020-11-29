@@ -36,7 +36,8 @@
     "progress-bar-webpack-plugin": "^2.1.0",
     "react-app-rewire-alias": "^0.1.8",
     "react-app-rewired": "^2.1.6",
-    "webpack-build-notifier": "^2.1.0"
+    "webpack-build-notifier": "^2.1.0",
+    "webpack-bundle-analyzer": "^4.1.0"
   },
   "devDependencies": {
     "microbundle": "^0.12.4"
